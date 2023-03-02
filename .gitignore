@@ -1,5 +1,6 @@
 # Compiled js file
 src/*.js
+dist/
 
 # Logs
 logs
