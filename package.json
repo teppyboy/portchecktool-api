@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "Unofficial PortCheckTool.com API",
     "homepage": "https://github.com/teppyboy/portchecktool-api",
+    "repository": {
+      "url": "https://github.com/teppyboy/portchecktool-api.git"
+    },
     "bugs": {
       "url": "https://github.com/teppyboy/portchecktool-api/issues"
     },
