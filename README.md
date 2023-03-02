@@ -4,6 +4,8 @@ Unofficial https://www.portchecktool.com/ wrapper written in TypeScript
 
 ## Building
 
+You must have TypeScript & dependencies installed (and optionally all dev dependencies to build for browser)
+
 ### Automatically
 
 ```

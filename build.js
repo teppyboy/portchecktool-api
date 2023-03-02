@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-const browserify = require('browserify')
 const fs = require('fs')
 const spawnSync = require('child_process').spawnSync
 
@@ -15,6 +14,8 @@ const args = process.argv.slice(2)
 buildModule()
 
 if (args.includes('--browser')) {
+    // Only import when user uses it.
+    const browserify = require('browserify')
     console.log("Browserifing...")
     browserify('./dist/module/index.js')
         .bundle()
