@@ -1,6 +1,15 @@
-const PortCheckTool = require('portchecktool-api').default
+const portCheckTool = require('portchecktool-api')
 
-const portchecktool = new PortCheckTool()
-portchecktool.checkPort(80).then((rsp) => {
+console.log(portCheckTool)
+
+portCheckTool.checkPort(80).then((rsp) => {
     console.log(rsp)
+})
+
+portCheckTool.checkPort(65535).then((rsp) => {
+    console.log(rsp)
+})
+
+portCheckTool.getIpAddress().then((ip) => {
+    console.log(ip)
 })
