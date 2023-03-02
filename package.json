@@ -9,7 +9,7 @@
     "bugs": {
         "url": "https://github.com/teppyboy/portchecktool-api/issues"
     },
-    "main": "src/index.js",
+    "main": "dist/module/index.js",
     "scripts": {
         "test": "node ./test/test.js"
     },
