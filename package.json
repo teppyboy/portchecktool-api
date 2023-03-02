@@ -4,10 +4,10 @@
     "description": "Unofficial PortCheckTool.com API",
     "homepage": "https://github.com/teppyboy/portchecktool-api",
     "repository": {
-      "url": "https://github.com/teppyboy/portchecktool-api.git"
+        "url": "https://github.com/teppyboy/portchecktool-api.git"
     },
     "bugs": {
-      "url": "https://github.com/teppyboy/portchecktool-api/issues"
+        "url": "https://github.com/teppyboy/portchecktool-api/issues"
     },
     "main": "src/index.js",
     "scripts": {
@@ -20,5 +20,15 @@
     "license": "MIT",
     "dependencies": {
         "node-html-parser": "^6.1.5"
+    },
+    "devDependencies": {
+        "@browserify/envify": "^6.0.0",
+        "@browserify/uglifyify": "^6.0.0",
+        "browser-pack-flat": "^3.5.0",
+        "browserify": "^17.0.0",
+        "common-shakeify": "^1.1.2",
+        "minify-stream": "^2.1.0",
+        "terser": "^5.16.5",
+        "unassertify": "^3.0.1"
     }
 }
