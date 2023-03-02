@@ -1,0 +1,17 @@
+{
+    "name": "portchecktool-api",
+    "version": "1.0.0",
+    "description": "Unofficial PortCheckTool.com API",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "port-check-tool"
+    ],
+    "author": "tretrauit",
+    "license": "MIT",
+    "dependencies": {
+        "node-html-parser": "^6.1.5"
+    }
+}
