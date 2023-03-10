@@ -1,18 +1,29 @@
 import { parse } from 'node-html-parser/dist/nodes/html'
 
 /**
- * Check the specified port to see status
+ * Get the current IPv4 address
  */
-
-async function getIpAddress() {
+async function getIpAddress(): Promise<string | undefined> {
     const rsp = await fetch('https://www.portchecktool.com')
     const html = parse(await rsp.text())
-    return html.querySelector('#input-ip')?.getAttribute("value")
+    return html.querySelector('#input-ip')?.getAttribute('value')
 }
 
-async function checkPort(port: number) {
+/**
+ * Check the specified port
+ *
+ * If the port is open, the reason will contain your IPv4 address.
+ */
+async function checkPort(port: number): Promise<
+    | {
+          port: number
+          isOpen: boolean
+          reason: string
+      }
+    | undefined
+> {
     if (!Number.isInteger(port)) {
-        throw new Error("Port must be an integer.")
+        throw new Error('Port must be an integer.')
     }
     const data = new FormData()
     data.append('port', port.toString())
@@ -29,10 +40,10 @@ async function checkPort(port: number) {
     // Open port
     if (alert.classList.contains('alert-success')) {
         const reason = alert.innerText
-            .normalize()
-            .substring(1)
+            .replace(/[\r\t\f\v]|&nbsp;/g, '')
+            .replace(/[\n]/g, ' ')
             .trim()
-            .replace('\\n\\t', '')
+            .substring(2)
         return {
             port: port,
             isOpen: true,
@@ -41,9 +52,10 @@ async function checkPort(port: number) {
     }
     if (alert.classList.contains('alert-error')) {
         const reason = alert.innerText
-            .substring(alert.innerText.indexOf('Reason:'))
+            .substring(alert.innerText.indexOf('Reason:') + 7)
             .normalize()
             .trim()
+            .replace('&nbsp;', '')
         return {
             port: port,
             isOpen: false,
