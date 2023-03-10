@@ -11,6 +11,7 @@ You must have TypeScript & dependencies installed (and optionally all dev depend
 ```
 ./build.js
 ```
+
 > Append `--browser` to browserify the built module.
 
 ### Manually

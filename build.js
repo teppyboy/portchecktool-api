@@ -5,7 +5,7 @@ const spawnSync = require('child_process').spawnSync
 
 function buildModule() {
     // Lazy af
-    console.log("Building NodeJS module...")
+    console.log('Building NodeJS module...')
     spawnSync('tsc', ['--outDir', './dist/module/'])
 }
 
@@ -16,7 +16,7 @@ buildModule()
 if (args.includes('--browser')) {
     // Only import when user uses it.
     const browserify = require('browserify')
-    console.log("Browserifing...")
+    console.log('Browserifing...')
     browserify('./dist/module/index.js')
         .bundle()
         .pipe(fs.createWriteStream('./dist/portchecktool-api.js'))
