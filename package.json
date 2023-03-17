@@ -1,6 +1,6 @@
 {
     "name": "@teppyboy/portchecktool-api",
-    "version": "1.0.0",
+    "version": "1.0.0-1",
     "description": "Unofficial https://www.portchecktool.com/ wrapper.",
     "homepage": "https://github.com/teppyboy/portchecktool-api",
     "repository": {
