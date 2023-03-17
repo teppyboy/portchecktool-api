@@ -1,5 +1,5 @@
 {
-    "name": "portchecktool-api",
+    "name": "@teppyboy/portchecktool-api",
     "version": "1.0.0",
     "description": "Unofficial https://www.portchecktool.com/ wrapper.",
     "homepage": "https://github.com/teppyboy/portchecktool-api",
@@ -8,6 +8,12 @@
     },
     "bugs": {
         "url": "https://github.com/teppyboy/portchecktool-api/issues"
+    },
+    "files": [
+        "dist/module/"
+    ],
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
     },
     "main": "dist/module/index.js",
     "scripts": {
